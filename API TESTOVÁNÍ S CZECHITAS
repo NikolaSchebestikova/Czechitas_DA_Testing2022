@@ -1,0 +1,488 @@
+{
+	"id": "9be44955-9de9-49cb-8fd3-43a63cb12229",
+	"name": "TESTY NA API",
+	"timestamp": "2022-10-19T18:26:20.115Z",
+	"collection_id": "23897749-ef6fe481-3eaa-4a08-8a5a-5e409ea2da47",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "18fa8768-c191-4cd9-b87d-081053642ac8",
+			"name": "all terms",
+			"url": "https://datop22-tester-tornado.herokuapp.com/api/terms?page=1&perPage=50",
+			"time": 722,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				722
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5e475145-3b31-470e-b66f-fdb80e631f43",
+			"name": "new term",
+			"url": "https://datop22-tester-tornado.herokuapp.com/api/terms",
+			"time": 118,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				118
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "67e59311-19a8-473d-826c-65c5593f03ba",
+			"name": "list with new term",
+			"url": "https://datop22-tester-tornado.herokuapp.com/api/terms?page=1&perPage=150",
+			"time": 118,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				118
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "14e84ee8-720a-4ea6-9246-26e94acd8a69",
+			"name": "Term with new price and opening time",
+			"url": "https://datop22-tester-tornado.herokuapp.com/api/terms/1041",
+			"time": 105,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				105
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6b4b8bda-b720-42e6-83ae-d3a81a40d98d",
+			"name": "vrácená data o term a data",
+			"url": "https://datop22-tester-tornado.herokuapp.com/api/terms/1041",
+			"time": 104,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				104
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "35e1133d-3d73-4942-8dd2-3cb8522376b9",
+			"name": "term - delete",
+			"url": "https://datop22-tester-tornado.herokuapp.com/api/terms/1041",
+			"time": 883,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				883
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "03526065-cd02-4a02-b801-c01d05f71dd1",
+			"name": "termín nenalezen",
+			"url": "https://datop22-tester-tornado.herokuapp.com/api/terms?page=1&perPage=150",
+			"time": 140,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				140
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2190,
+	"collection": {
+		"requests": [
+			{
+				"id": "18fa8768-c191-4cd9-b87d-081053642ac8",
+				"method": "GET"
+			},
+			{
+				"id": "5e475145-3b31-470e-b66f-fdb80e631f43",
+				"method": "POST"
+			},
+			{
+				"id": "67e59311-19a8-473d-826c-65c5593f03ba",
+				"method": "GET"
+			},
+			{
+				"id": "14e84ee8-720a-4ea6-9246-26e94acd8a69",
+				"method": "PUT"
+			},
+			{
+				"id": "6b4b8bda-b720-42e6-83ae-d3a81a40d98d",
+				"method": "GET"
+			},
+			{
+				"id": "35e1133d-3d73-4942-8dd2-3cb8522376b9",
+				"method": "DELETE"
+			},
+			{
+				"id": "03526065-cd02-4a02-b801-c01d05f71dd1",
+				"method": "GET"
+			}
+		]
+	}
+}
+
+
+DRUHÉ CVIČENÍ
+{
+	"info": {
+		"_postman_id": "49e2e0e6-8109-4756-b7a8-95053035e78c",
+		"name": "DOMÁCÍ ÚKOL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23897749"
+	},
+	"item": [
+		{
+			"name": "singeluser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registersuccesful",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "aplication/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"michael.lawson@reqres.in\",\r\n    \"password\": \"horalka\"\r\n}"
+				},
+				"url": {
+					"raw": "https://reqres.in/api/register",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "singeluser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/7",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginsuccessful",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"michael.lawson@reqres.in\",\r\n    \"password\": \"horalka\"\r\n}"
+				},
+				"url": {
+					"raw": "https://reqres.in/api/login",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COUNTRY",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restcountries.com/v3.1/name/mexico",
+					"protocol": "https",
+					"host": [
+						"restcountries",
+						"com"
+					],
+					"path": [
+						"v3.1",
+						"name",
+						"mexico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\thttps://dummy.restapiexample.com/api/v1/employees",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/employees",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://dummy.restapiexample.com/api/v1/employee/4",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/employee/4",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\thttps://dummy.restapiexample.com/api/v1/update/4",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"name\": \"Cedric Kelly Kelly Cedric\",\r\n        \"salary\": \"10000\",\r\n        \"age\": \"30\",\r\n        \"id\": 4\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/update/4",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"update",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
